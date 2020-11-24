@@ -29,6 +29,17 @@ public struct Podcast {
 }
 
 
+// MARK: -
+
+extension Podcast: ExpressibleByStringLiteral {
+    public init(stringLiteral value: String) {
+        self.init(title: value)
+        
+    }
+    
+}
+
+
 // MARK: - Property Setters
 
 public extension Podcast {
