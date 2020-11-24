@@ -7,21 +7,15 @@
 
 import Foundation
 
-enum WebDestination {
-    case authority(_ siteAuthority: String, useHTTPS: Bool = true)
-    case page(_ pageURL: String)
-    
-}
-
 public struct Podcast {
     public struct Properties {
-        var title: String
-        var subtitle: String?
-        var abbreviations = [String]()
-        var producers = [String]()
-        var hosts = [String]()
+        public var title: String
+        public var subtitle: Subtitle?
+        public var abbreviations = [String]()
+        public var producers = [String]()
+        public var hosts = [String]()
         
-        var destination: WebDestination?
+        public var destination: WebDestination?
         
     }
     
@@ -65,6 +59,12 @@ public extension Podcast {
     }
     
     func subtitle(_ subtitle: String) -> Self {
+        var new = self
+        new[\.subtitle] = .verbatim(subtitle)
+        return new
+    }
+    
+    func subtitle(_ subtitle: Subtitle) -> Self {
         var new = self
         new[\.subtitle] = subtitle
         return new
