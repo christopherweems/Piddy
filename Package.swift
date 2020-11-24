@@ -19,6 +19,7 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
         .package(url: "https://github.com/christopherweems/MixedGroup", .branch("main")),
+        .package(url: "https://github.com/christopherweems/unstandard", .branch("main")),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -28,11 +29,13 @@ let package = Package(
             dependencies: [
                 "PodcastGroup",
                 .product(name: "MixedGroup", package: "MixedGroup"),
+                .product(name: "unstandard", package: "unstandard"),
             ]),
         .target(
             name: "PodcastGroup",
             dependencies: [
                 .product(name: "MixedGroup", package: "MixedGroup"),
+                .product(name: "unstandard", package: "unstandard"),
             ]),
         .testTarget(
             name: "PiddyTests",
