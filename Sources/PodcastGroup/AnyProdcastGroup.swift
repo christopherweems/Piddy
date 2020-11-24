@@ -8,9 +8,12 @@
 import Foundation
 import MixedGroup
 
-struct AnyPodcastGroup: PodcastGroup {
-    var body: Body {
-        fatalError()
+public struct AnyPodcastGroup: PodcastGroup {
+    public let body: Body
+    
+    public init<Group: PodcastGroup>(other: Group) {
+        body = other.body
+        
     }
     
 }
