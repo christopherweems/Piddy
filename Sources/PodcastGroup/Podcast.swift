@@ -32,6 +32,10 @@ public struct Podcast {
         set { properties[keyPath: propertyKeyPath] = newValue }
     }
     
+    public subscript<V>(propertyKeyPath: KeyPath<Properties, V>) -> V {
+        properties[keyPath: propertyKeyPath]
+    }
+    
     public init(title: String) {
         properties = Properties(title: title)
         
