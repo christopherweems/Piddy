@@ -37,4 +37,6 @@ public struct Psychology: PodcastGroup {
         
     }
     
+    public init() { }
+    
 }

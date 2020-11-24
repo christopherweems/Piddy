@@ -33,4 +33,6 @@ public struct Horror: PodcastGroup {
         
     }
     
+    public init() { }
+    
 }
