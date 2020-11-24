@@ -24,7 +24,9 @@ public struct Psychology: PodcastGroup {
             .url("https://www.apa.org/research/action/speaking-of-psychology/")
         
         "Therapy For Black Girls"
-            .subtitle("The Podcast")
+//            .subtitle("The Podcast")
+            .host("Joy Harden Bradford, Ph.D.")
+            .producer("iHeartRadio")
             .url("https://therapyforblackgirls.com/podcast/")
         
         "Unlocking Us"
