@@ -44,7 +44,7 @@ public extension Podcast.Properties {
     var subtitleText: String? {
         guard let subtitle = subtitle else {
             let elements = hosts + producers
-            return Self.listFormatter.string(from: elements)
+            return Self.listFormatter.string(from: elements).notEmpty
         }
         
         switch subtitle {
