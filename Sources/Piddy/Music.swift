@@ -11,6 +11,7 @@ public struct Music: PodcastGroup {
     public var body: Body {
         "Dolly Parton's America"
             .producer("WNYC Studios", "OSM Audio")
+            .url(authority: "dollypartonsamerica.com")
         
         "Questlove Supreme"
             .producer("iHeartRadio")

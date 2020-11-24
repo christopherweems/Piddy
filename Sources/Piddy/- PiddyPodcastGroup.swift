@@ -11,9 +11,11 @@ import unstandard
 
 public enum PiddyPodcastGroup: PodcastGroup, CaseIterable {
     case comedy
+    case culture
     case design
     case horror
     case music
+    case politics
     case psychology
     case science
     case sports
@@ -26,6 +28,9 @@ public enum PiddyPodcastGroup: PodcastGroup, CaseIterable {
         case .comedy:
             Comedy()
             
+        case .culture:
+            Culture()
+            
         case .design:
             Design()
             
@@ -34,6 +39,9 @@ public enum PiddyPodcastGroup: PodcastGroup, CaseIterable {
             
         case .music:
             Music()
+            
+        case .politics:
+            Politics()
             
         case .psychology:
             Psychology()
