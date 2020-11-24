@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import unstandard
 
 public struct Podcast {
     public struct Properties {
@@ -39,7 +40,10 @@ public struct Podcast {
 
 public extension Podcast.Properties {
     var subtitleText: String? {
-        guard let subtitle = subtitle else { return nil }
+        guard let subtitle = subtitle else {
+            let elements = hosts.nonEmpty ?? producers
+            return elements.joined(separator: " / ").nonEmpty
+        }
         
         switch subtitle {
         case .verbatim(let verbatim):
