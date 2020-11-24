@@ -7,11 +7,21 @@
 
 import Foundation
 
+enum WebDestination {
+    case authority(_ siteAuthority: String, useHTTPS: Bool = true)
+    case page(_ pageURL: String)
+    
+}
+
 public struct Podcast {
     public struct Properties {
         var title: String
+        var subtitle: String?
         var abbreviations = [String]()
+        var producers = [String]()
         var hosts = [String]()
+        
+        var destination: WebDestination?
         
     }
     
@@ -50,6 +60,12 @@ public extension Podcast {
         return new
     }
     
+    func subtitle(_ subtitle: String) -> Self {
+        var new = self
+        new[\.subtitle] = subtitle
+        return new
+    }
+    
     func abbreviation(_ abbreviations: String...) -> Self {
         self._abbreviation(abbreviations)
     }
@@ -78,6 +94,11 @@ public extension String {
             .title(title)
     }
     
+    func subtitle(_ subtitle: String) -> Podcast {
+        self.as(Podcast.self)
+            .subtitle(subtitle)
+    }
+    
     func abbreviation(_ abbreviations: String...) -> Podcast {
         self.as(Podcast.self)
             ._abbreviation(abbreviations)
@@ -86,6 +107,61 @@ public extension String {
     func host(_ hosts: String...) -> Podcast {
         self.as(Podcast.self)
             ._host(hosts)
+    }
+    
+}
+
+
+// MARK: -
+
+public extension Podcast {
+    func network(_ networks: String...) -> Self {
+        self._network(networks)
+    }
+    
+    func _network(_ networks: [String]) -> Self {
+        var new = self
+        new[\.producers].append(contentsOf: networks)
+        return new
+    }
+    
+}
+
+public extension String {
+    func network(_ networks: String...) -> Podcast {
+        self.as(Podcast.self)
+            ._network(networks)
+    }
+    
+}
+
+
+// MARK: -
+
+public extension Podcast {
+    func url(authority: String, useHTTPS: Bool = true) -> Podcast {
+        var new = self
+        new[\.destination] = .authority(authority, useHTTPS: useHTTPS)
+        return new
+    }
+    
+    func url(_ urlString: String) -> Podcast {
+        var new = self
+        new[\.destination] = .page(urlString)
+        return new
+    }
+    
+}
+
+public extension String {
+    func url(authority: String, useHTTPS: Bool = true) -> Podcast {
+        self.as(Podcast.self)
+            .url(authority: authority)
+    }
+    
+    func url(_ urlString: String) -> Podcast {
+        self.as(Podcast.self)
+            .url(urlString)
     }
     
 }
