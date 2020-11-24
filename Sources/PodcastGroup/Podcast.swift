@@ -10,6 +10,7 @@ import Foundation
 public struct Podcast {
     public struct Properties {
         var title: String
+        var abbreviations = [String]()
         var hosts = [String]()
         
     }
@@ -49,10 +50,42 @@ public extension Podcast {
         return new
     }
     
+    func abbreviation(_ abbreviations: String...) -> Self {
+        self._abbreviation(abbreviations)
+    }
+    
     func host(_ hosts: String...) -> Self {
+        self._host(hosts)
+    }
+    
+    fileprivate func _abbreviation(_ abbreviations: [String]) -> Self {
+        var new = self
+        new[\.abbreviations] = abbreviations
+        return new
+    }
+    
+    fileprivate func _host(_ hosts: [String]) -> Self {
         var new = self
         new[\.hosts].append(contentsOf: hosts)
         return new
+    }
+    
+}
+
+public extension String {
+    func title(_ title: String) -> Podcast {
+        self.as(Podcast.self)
+            .title(title)
+    }
+    
+    func abbreviation(_ abbreviations: String...) -> Podcast {
+        self.as(Podcast.self)
+            ._abbreviation(abbreviations)
+    }
+    
+    func host(_ hosts: String...) -> Podcast {
+        self.as(Podcast.self)
+            ._host(hosts)
     }
     
 }
