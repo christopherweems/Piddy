@@ -39,10 +39,12 @@ public struct Podcast {
 }
 
 public extension Podcast.Properties {
+    private static let listFormatter = ListFormatter()
+    
     var subtitleText: String? {
         guard let subtitle = subtitle else {
-            let elements = hosts.nonEmpty ?? producers
-            return elements.joined(separator: " / ").nonEmpty
+            let elements = hosts + producers
+            return Self.listFormatter.string(from: elements)
         }
         
         switch subtitle {
@@ -53,7 +55,8 @@ public extension Podcast.Properties {
             return hosts.first
             
         case .with(.all):
-            return hosts.joined(separator: ", ")
+            let hostsAsList = Self.listFormatter.string(from: hosts) ?? ""
+            return "\(hostsAsList)"
         }
     }
     
