@@ -37,6 +37,24 @@ public struct Podcast {
     
 }
 
+public extension Podcast.Properties {
+    var subtitleText: String? {
+        guard let subtitle = subtitle else { return nil }
+        
+        switch subtitle {
+        case .verbatim(let verbatim):
+            return verbatim
+            
+        case .with(.first):
+            return hosts.first
+            
+        case .with(.all):
+            return hosts.joined(separator: ", ")
+        }
+    }
+    
+}
+
 
 // MARK: -
 
