@@ -52,29 +52,17 @@ extension Podcast: ExpressibleByStringLiteral {
 // MARK: - Property Setters
 
 public extension Podcast {
-    func title(_ title: String) -> Self {
+    func title(_ title: String) -> Podcast {
         var new = self
         new[\.title] = title
         return new
     }
     
-    func subtitle(_ subtitle: String) -> Self {
-        var new = self
-        new[\.subtitle] = .verbatim(subtitle)
-        return new
-    }
-    
-    func subtitle(_ subtitle: Subtitle) -> Self {
-        var new = self
-        new[\.subtitle] = subtitle
-        return new
-    }
-    
-    func abbreviation(_ abbreviations: String...) -> Self {
+    func abbreviation(_ abbreviations: String...) -> Podcast {
         self._abbreviation(abbreviations)
     }
     
-    func host(_ hosts: String...) -> Self {
+    func host(_ hosts: String...) -> Podcast {
         self._host(hosts)
     }
     
@@ -98,11 +86,6 @@ public extension String {
             .title(title)
     }
     
-    func subtitle(_ subtitle: String) -> Podcast {
-        self.as(Podcast.self)
-            .subtitle(subtitle)
-    }
-    
     func abbreviation(_ abbreviations: String...) -> Podcast {
         self.as(Podcast.self)
             ._abbreviation(abbreviations)
@@ -119,13 +102,61 @@ public extension String {
 // MARK: -
 
 public extension Podcast {
-    func network(_ networks: String...) -> Self {
-        self._network(networks)
+    func subtitle(_ subtitle: String) -> Podcast {
+        var new = self
+        new[\.subtitle] = .verbatim(subtitle)
+        return new
     }
     
-    func _network(_ networks: [String]) -> Self {
+    func subtitle(_ subtitle: Subtitle) -> Podcast {
         var new = self
-        new[\.producers].append(contentsOf: networks)
+        new[\.subtitle] = subtitle
+        return new
+    }
+    
+    func with(host: String) -> Podcast {
+        assert(self[\.hosts].isEmpty, "podcast with host in subtitle must be first specified host")
+        var new = self
+        new[\.hosts].append(host)
+        new[\.subtitle] = .with(.first)
+        return new
+    }
+    
+}
+
+public extension String {
+    func subtitle(_ subtitle: String) -> Podcast {
+        self.as(Podcast.self)
+            .subtitle(subtitle)
+    }
+    
+    func subtitle(_ subtitle: Subtitle) -> Podcast {
+        self.as(Podcast.self)
+            .subtitle(subtitle)
+    }
+    
+    func with(host: String) -> Podcast {
+        self.as(Podcast.self)
+            .with(host: host)
+    }
+    
+}
+
+
+// MARK: -
+
+public extension Podcast {
+    func network(_ networks: String...) -> Podcast {
+        self._producer(networks)
+    }
+    
+    func producer(_ producers: String...) -> Podcast {
+        self._producer(producers)
+    }
+    
+    fileprivate func _producer(_ producers: [String]) -> Self {
+        var new = self
+        new[\.producers].append(contentsOf: producers)
         return new
     }
     
@@ -134,7 +165,12 @@ public extension Podcast {
 public extension String {
     func network(_ networks: String...) -> Podcast {
         self.as(Podcast.self)
-            ._network(networks)
+            ._producer(networks)
+    }
+    
+    func producer(_ producers: String...) -> Podcast {
+        self.as(Podcast.self)
+            ._producer(producers)
     }
     
 }
