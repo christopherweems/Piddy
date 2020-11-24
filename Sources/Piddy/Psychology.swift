@@ -19,11 +19,11 @@ public struct Psychology: PodcastGroup {
         "Popcorn Psychology"
             .url("https://www.spreaker.com/user/popcorn_psychology")
         
-        "Speaking of Psychology"
+        "Speaking Of Psychology"
             .producer("American Psychological Association")
             .url("https://www.apa.org/research/action/speaking-of-psychology/")
         
-        "Therapy for Black Girls"
+        "Therapy For Black Girls"
             .subtitle("The Podcast")
             .url("https://therapyforblackgirls.com/podcast/")
         
