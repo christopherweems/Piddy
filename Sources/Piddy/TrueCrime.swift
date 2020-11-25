@@ -11,6 +11,7 @@ public struct TrueCrime: PodcastGroup {
     public var body: Body {
         "Crime Junkie"
             .producer("audiochuck")
+            .url(authority: "crimejunkiepodcast.com")
         
         "Do No Harm"
             .producer("Wondery", .nbcNews)
