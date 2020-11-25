@@ -13,7 +13,7 @@ public struct Podcast {
         public var title: String
         public var subtitle: Subtitle?
         public var abbreviations = [String]()
-        public var producers = [String]()
+        public var producers = [Producer]()
         public var hosts = [String]()
         
         public var destination: WebDestination?
@@ -47,7 +47,7 @@ public extension Podcast.Properties {
                 elements.allSatisfy(title.contains)
             }
             
-            let elements = hosts.if { !titleContainsAll($0) } ?? producers
+            let elements = hosts.if { !titleContainsAll($0) } ?? producers.map(\.displayString)
             return Self.listFormatter.string(from: elements).notEmpty
         }
         
@@ -175,15 +175,15 @@ public extension String {
 // MARK: -
 
 public extension Podcast {
-    func network(_ networks: String...) -> Podcast {
+    func network(_ networks: Producer...) -> Podcast {
         self._producer(networks)
     }
     
-    func producer(_ producers: String...) -> Podcast {
+    func producer(_ producers: Producer...) -> Podcast {
         self._producer(producers)
     }
     
-    fileprivate func _producer(_ producers: [String]) -> Self {
+    fileprivate func _producer(_ producers: [Producer]) -> Self {
         var new = self
         new[\.producers].append(contentsOf: producers)
         return new
@@ -192,12 +192,12 @@ public extension Podcast {
 }
 
 public extension String {
-    func network(_ networks: String...) -> Podcast {
+    func network(_ networks: Producer...) -> Podcast {
         self.as(Podcast.self)
             ._producer(networks)
     }
     
-    func producer(_ producers: String...) -> Podcast {
+    func producer(_ producers: Producer...) -> Podcast {
         self.as(Podcast.self)
             ._producer(producers)
     }
