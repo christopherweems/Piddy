@@ -15,7 +15,7 @@ public struct Business: PodcastGroup {
         
         "Land Of The Giants"
             .subtitle("The Netflix Effect")
-            .producer("Vox")
+            .producer(.vox)
             .url("https://www.vox.com/land-of-the-giants-podcast")
         
     }

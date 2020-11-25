@@ -10,6 +10,8 @@ import PodcastGroup
 public struct Psychology: PodcastGroup {
     public var body: Body {
         "Hidden Brain"
+            .subtitle("A Conversation About Life's Unseen Patterns")
+            .producer(.npr)
             .url("https://www.npr.org/series/423302056/hidden-brain")
         
         "On Being"
@@ -26,7 +28,7 @@ public struct Psychology: PodcastGroup {
         "Therapy For Black Girls"
 //            .subtitle("The Podcast")
             .host("Joy Harden Bradford, Ph.D.")
-            .producer("iHeartRadio")
+            .producer(.iHeartRadio)
             .url("https://therapyforblackgirls.com/podcast/")
         
         "Unlocking Us"

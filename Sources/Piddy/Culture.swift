@@ -16,11 +16,11 @@ public struct Culture: PodcastGroup {
             .url("https://www.gatesnotes.com/podcast")
         
         "California City"
-            .producer("LAist Studios")
+            .producer(.LAistStudios)
             .url("https://www.npr.org/podcasts/890392491/california-city")
         
         "Stuff You Should Know"
-            .producer("iHeartRadio")
+            .producer(.iHeartRadio)
             .url(authority: "stuffyoushouldknow.com")
         
     }

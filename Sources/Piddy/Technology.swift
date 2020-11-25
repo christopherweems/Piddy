@@ -12,9 +12,9 @@ public struct Technology: PodcastGroup {
         "Accidental Tech Podcast"
             .host("Marco Arment", "Casey Liss", "John Siracusa")
             .url(authority: "atp.fm")
-                
+        
         "Reply All"
-            .network("Gimlet")
+            .network(.gimlet)
             .url("https://gimletmedia.com/reply-all/")
         
         "The Talk Show"

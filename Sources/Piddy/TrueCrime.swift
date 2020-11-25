@@ -13,9 +13,9 @@ public struct TrueCrime: PodcastGroup {
             .producer("audiochuck")
         
         "Do No Harm"
-            .producer("Wondery", "NBC News")
+            .producer("Wondery", .nbcNews)
             .url("https://www.nbcnews.com/donoharm")
-                
+        
         "Dr. Death"
             .host("Laura Bell")
             .url("https://wondery.com/shows/dr-death/")

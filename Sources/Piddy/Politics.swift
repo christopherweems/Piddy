@@ -10,7 +10,7 @@ import PodcastGroup
 public struct Politics: PodcastGroup {
     public var body: Body {
         "The Ben Sharpiro Show"
-            .producer("The Daily Wire")
+            .producer(.dailyWire)
         
         "The Charlie Kirk Show"
             .host("Charlie Kirk")

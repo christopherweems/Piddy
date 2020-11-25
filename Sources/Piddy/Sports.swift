@@ -10,7 +10,7 @@ import PodcastGroup
 public struct Sports: PodcastGroup {
     public var body: Body {
         "Sports Uncovered"
-            .producer("NBC Sports")
+            .producer(.nbcSports)
         
     }
     

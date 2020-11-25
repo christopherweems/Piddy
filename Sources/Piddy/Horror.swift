@@ -17,7 +17,7 @@ public struct Horror: PodcastGroup {
             .url(authority: "knifepointhorror.libsyn.com")
         
         "Light House"
-            .producer("iHeartRadio")
+            .producer(.iHeartRadio)
         
         "Nightmare Magazine"
         

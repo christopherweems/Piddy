@@ -10,7 +10,7 @@ import PodcastGroup
 public struct Science: PodcastGroup {
     public var body: Body {
         "Surprisingly Brilliant"
-            .producer("iHeartRadio", "Seeker")
+            .producer(.iHeartRadio, "Seeker")
             .url("https://www.iheart.com/podcast/1119-surprisingly-brilliant-59581612/")
         
         "60-Second Science"
