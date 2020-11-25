@@ -3,11 +3,11 @@
     "pins": [
       {
         "package": "MixedGroup",
-        "repositoryURL": "https://github.com/christopherweems/MixedGroup",
+        "repositoryURL": "https://github.com/docmcgit/MixedGroup",
         "state": {
-          "branch": "main",
+          "branch": null,
           "revision": "3234f28234bb569effcfb665ef19e5f1d2b65dd1",
-          "version": null
+          "version": "0.0.1"
         }
       },
       {
@@ -41,9 +41,9 @@
         "package": "unstandard",
         "repositoryURL": "https://github.com/christopherweems/unstandard",
         "state": {
-          "branch": "main",
+          "branch": null,
           "revision": "b3acfdbb35ba86ad4b7024f6c0a62a3267e93208",
-          "version": null
+          "version": "0.0.6"
         }
       }
     ]
