@@ -209,12 +209,14 @@ public extension String {
 
 public extension Podcast {
     func url(authority: String, useHTTPS: Bool = true) -> Podcast {
+        assert(!authority.hasPrefix("https"))
         var new = self
         new[\.destination] = .authority(authority, useHTTPS: useHTTPS)
         return new
     }
     
     func url(_ urlString: String) -> Podcast {
+        assert(urlString.hasPrefix("https"))
         var new = self
         new[\.destination] = .page(urlString)
         return new
