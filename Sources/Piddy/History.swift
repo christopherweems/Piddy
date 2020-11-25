@@ -7,8 +7,8 @@
 
 import PodcastGroup
 
-struct History: PodcastGroup {
-    var body: Body {
+public struct History: PodcastGroup {
+    public var body: Body {
         "Ben Franklin's World"
             .url(authority: "benfranklinsworld.com")
         
@@ -25,5 +25,7 @@ struct History: PodcastGroup {
             .url(authority: "15minutehistory.org")
         
     }
+    
+    public init() { }
     
 }
