@@ -43,7 +43,11 @@ public extension Podcast.Properties {
     
     var subtitleText: String? {
         guard let subtitle = subtitle else {
-            let elements = hosts + producers
+            func titleContainsAll(_ elements: [String]) -> Bool {
+                elements.allSatisfy(title.contains)
+            }
+            
+            let elements = hosts.if { !titleContainsAll($0) } ?? producers
             return Self.listFormatter.string(from: elements).notEmpty
         }
         
