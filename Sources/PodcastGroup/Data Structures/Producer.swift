@@ -19,6 +19,7 @@ public enum Producer {
     case nbcSports
     case osmAudio
     case pushkin
+    case studio71
     case vox
     case wnycStudios
     case wondery
@@ -64,7 +65,7 @@ public extension Producer {
 
 fileprivate extension String {
     func separateCamelCase() -> String {
-        self.chunked { $0.isUppercase || $1.isLowercase }
+        self.chunked { $0.isUppercase || $1.isLowercase || ($0.isNumber && $1.isNumber) }
             .map { $0.allSatisfy(\.isUppercase) ? String($0) : $0.capitalized }
             .joined(separator: " ")
     }
