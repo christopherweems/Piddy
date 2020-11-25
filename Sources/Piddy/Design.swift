@@ -11,6 +11,7 @@ public struct Design: PodcastGroup {
     public var body: Body {
         "99% Invisible"
             .host("Roman Mars")
+            .url(authority: "99percentinvisible.org")
         
     }
     

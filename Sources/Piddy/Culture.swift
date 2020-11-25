@@ -12,7 +12,12 @@ public struct Culture: PodcastGroup {
         "Bill Gates and Rashida Jones Ask Big Questions"
             .host("Bill Gates", "Rashida Jones")
             .producer("Gates Notes")
+            .abbreviation("ABQ")
             .url("https://www.gatesnotes.com/podcast")
+        
+        "California City"
+            .producer("LAist Studios")
+            .url("https://www.npr.org/podcasts/890392491/california-city")
         
         "Stuff You Should Know"
             .producer("iHeartRadio")

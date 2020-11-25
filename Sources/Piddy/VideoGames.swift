@@ -14,6 +14,9 @@ public struct VideoGames: PodcastGroup {
         "Nintendo Voice Chat"
             .url("https://www.ign.com/watch/nintendo-voice-chat")
         
+        "Retronauts"
+            .url(authority: "retronauts.com")
+        
         "Super Gamer Podcast"
             .url(authority: "supergamerpodcast.com")
         

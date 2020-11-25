@@ -14,11 +14,15 @@ public struct TrueCrime: PodcastGroup {
         
         "Do No Harm"
             .producer("Wondery", "NBC News")
+            .url("https://www.nbcnews.com/donoharm")
                 
         "Dr. Death"
+            .host("Laura Bell")
+            .url("https://wondery.com/shows/dr-death/")
         
         "Morbid"
             .subtitle("A True Crime Podcast")
+            .url(authority: "morbidpodcast.com")
         
         "My Favorite Murder"
             .host("Karen Kilgariff", "Georgia Hardstark")

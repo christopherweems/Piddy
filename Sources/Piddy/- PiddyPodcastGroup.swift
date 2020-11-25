@@ -10,11 +10,14 @@ import PodcastGroup
 import unstandard
 
 public enum PiddyPodcastGroup: PodcastGroup, CaseIterable {
+    case business
     case comedy
     case culture
     case design
+    case health
     case horror
     case music
+    case philosophy
     case politics
     case psychology
     case science
@@ -25,6 +28,9 @@ public enum PiddyPodcastGroup: PodcastGroup, CaseIterable {
     
     public var body: Body {
         switch self {
+        case .business:
+            Business()
+        
         case .comedy:
             Comedy()
             
@@ -34,11 +40,17 @@ public enum PiddyPodcastGroup: PodcastGroup, CaseIterable {
         case .design:
             Design()
             
+        case .health:
+            Health()
+            
         case .horror:
             Horror()
             
         case .music:
             Music()
+            
+        case .philosophy:
+            Philosophy()
             
         case .politics:
             Politics()

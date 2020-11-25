@@ -12,18 +12,22 @@ public struct Comedy: PodcastGroup {
         "The Adam Carolla Show"
         
         "Armchair Expert"
-            .subtitle(.with(.first))
             .host("Dax Sheppard")
+            .subtitle(.with(.first))
         
         "The Joe Rogan Experience"
             .host("Joe Rogan")
         
-        "Lady to Lady"
+        "Lady To Lady"
+            .host("Barbara Gray", "Brandie Posey", "Tess Barker")
             .url(authority: "ladytoladycomedy.com")
         
         "The Monday Morning Podcast"
             .host("Bill Burr")
             .url("https://billburr.com/podcast/")
+        
+        "Wait Wait... Don't Tell Me!"
+            .url("https://www.npr.org/programs/wait-wait-dont-tell-me/")
         
     }
     
