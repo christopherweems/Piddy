@@ -33,6 +33,7 @@ public struct Horror: PodcastGroup {
         
         "Unwell"
             .url(authority: "unwellpodcast.com")
+            .fiction()
         
         "Wrong Station"
             .url(authority: "wrongstation.com")
