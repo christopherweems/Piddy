@@ -24,6 +24,10 @@ public struct Culture: PodcastGroup {
             .producer(.LAistStudios)
             .url("https://www.npr.org/podcasts/890392491/california-city")
         
+        "The Lupe & Royce Show"
+            .host("Lupe Fiasco", "Royce da 5\'9\"", "Tom Frank")
+            .url(authority: "thelupeandroyceshow.buzzsprout.com")
+        
         "Stuff You Should Know"
             .producer(.iHeartRadio)
             .url(authority: "stuffyoushouldknow.com")

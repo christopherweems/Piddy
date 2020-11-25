@@ -9,6 +9,10 @@ import PodcastGroup
 
 public struct Business: PodcastGroup {
     public var body: Body {
+        "a16z Podcast"
+            .abbreviation("A16Z")
+            .url("https://a16z.com/a16z-podcast/")
+        
         "Decoder"
             .with(host: "Nilay Patel")
             .url("https://www.theverge.com/podcasts")
