@@ -234,3 +234,20 @@ public extension String {
     }
     
 }
+
+
+// MARK: -
+
+public extension Podcast {
+    func fiction(_ fiction: Bool = true) -> Podcast {
+        self
+    }
+    
+}
+
+public extension String {
+    func fiction(_ fiction: Bool = true) -> Podcast {
+        Podcast(stringLiteral: self)
+    }
+    
+}
