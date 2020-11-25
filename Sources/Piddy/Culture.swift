@@ -15,6 +15,11 @@ public struct Culture: PodcastGroup {
             .abbreviation("ABQ")
             .url("https://www.gatesnotes.com/podcast")
         
+        "Brave New Planet"
+            .host("Eric Lander")
+            .network(.pushkin)
+            .url("https://www.pushkin.fm/show/brave-new-planet/")
+        
         "California City"
             .producer(.LAistStudios)
             .url("https://www.npr.org/podcasts/890392491/california-city")

@@ -14,6 +14,11 @@ public struct Comedy: PodcastGroup {
         "Armchair Expert"
             .with(host: "Dax Sheppard")
         
+        "Attention HellMart Shoppers!"
+            .producer("Harmless Entertainment")
+            .url(authority: "attentionhellmartshoppers.com")
+            .fiction()
+        
         "The Joe Rogan Experience"
             .host("Joe Rogan")
             .abbreviation("JRE")

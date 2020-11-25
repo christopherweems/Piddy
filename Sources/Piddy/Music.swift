@@ -15,7 +15,7 @@ public struct Music: PodcastGroup {
         
         "Broken Record"
             .host("Rick Rubin", "Malcolm Gladwell", "Bruce Headlam", "Justin Richmond")
-            .producer(.pushkin)
+            .network(.pushkin)
             .url(authority: "brokenrecordpodcast.com")
         
         "Dolly Parton's America"

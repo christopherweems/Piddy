@@ -15,6 +15,11 @@ public struct Politics: PodcastGroup {
         "The Charlie Kirk Show"
             .host("Charlie Kirk")
         
+        "Deep Background"
+            .with(host: "Noah Feldman")
+            .network(.pushkin)
+            .url("https://www.pushkin.fm/show/deep-background/")
+        
         "Graham Allen's Dear America"
         
         "The Matt Walsh Show"
