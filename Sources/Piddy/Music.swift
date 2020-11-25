@@ -26,7 +26,9 @@ public struct Music: PodcastGroup {
             .url(authority: "songexploder.net")
         
         "Questlove Supreme"
+            .abbreviation("QLS")
             .producer(.iHeartRadio)
+            .url("https://www.iheart.com/podcast/1119-questlove-supreme-53194211/")
         
     }
     

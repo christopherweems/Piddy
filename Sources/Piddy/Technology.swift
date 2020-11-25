@@ -25,6 +25,7 @@ public struct Technology: PodcastGroup {
             .subtitle("The MKBHD Podcast")
             .abbreviation("WVFRM")
             .host("MKBHD")
+            .producer(.studio71)
         
     }
     

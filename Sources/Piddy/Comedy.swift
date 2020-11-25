@@ -10,9 +10,11 @@ import PodcastGroup
 public struct Comedy: PodcastGroup {
     public var body: Body {
         "The Adam Carolla Show"
+            .url(authority: "adamcarolla.com")
         
         "Armchair Expert"
             .with(host: "Dax Sheppard")
+            .url(authority: "armchairexpertpod.com")
         
         "Attention HellMart Shoppers!"
             .producer("Harmless Entertainment")
@@ -21,7 +23,6 @@ public struct Comedy: PodcastGroup {
         
         "The Joe Rogan Experience"
             .host("Joe Rogan")
-            .abbreviation("JRE")
             .url(authority: "thejoeroganexperience.net")
         
         "Lady To Lady"
@@ -30,7 +31,6 @@ public struct Comedy: PodcastGroup {
         
         "The Monday Morning Podcast"
             .host("Bill Burr")
-            .abbreviation("MM")
             .url("https://billburr.com/podcast/")
         
         "Wait Wait... Don't Tell Me!"

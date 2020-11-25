@@ -14,6 +14,7 @@ public struct Horror: PodcastGroup {
         
         "Knifepoint Horror"
             .host("Soren Narnia")
+            .abbreviation("KPH")
             .url(authority: "knifepointhorror.libsyn.com")
         
         "Light House"

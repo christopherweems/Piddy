@@ -11,9 +11,11 @@ public struct Politics: PodcastGroup {
     public var body: Body {
         "The Ben Sharpiro Show"
             .producer(.dailyWire)
+            .url("https://www.dailywire.com/show/the-ben-shapiro-show")
         
         "The Charlie Kirk Show"
             .host("Charlie Kirk")
+            .url("https://charliekirk.com/podcasts/")
         
         "Deep Background"
             .with(host: "Noah Feldman")
@@ -24,6 +26,7 @@ public struct Politics: PodcastGroup {
         
         "The Matt Walsh Show"
             .host("Matt Walsh")
+            .url("https://www.dailywire.com/show/the-matt-walsh-show")
         
     }
     
