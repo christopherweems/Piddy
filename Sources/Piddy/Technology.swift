@@ -11,6 +11,7 @@ public struct Technology: PodcastGroup {
     public var body: Body {
         "Accidental Tech Podcast"
             .host("Marco Arment", "Casey Liss", "John Siracusa")
+            .abbreviation("ATP")
             .url(authority: "atp.fm")
         
         "Reply All"
