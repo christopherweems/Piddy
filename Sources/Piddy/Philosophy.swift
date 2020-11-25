@@ -18,6 +18,8 @@ public struct Philosophy: PodcastGroup {
         "Philosophy for Our Times"
             .url("https://art19.com/shows/philosophy-for-our-times")
         
+        "Philosophize This!"
+        
     }
     
     public init() { }

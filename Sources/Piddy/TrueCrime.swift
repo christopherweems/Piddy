@@ -9,6 +9,8 @@ import PodcastGroup
 
 public struct TrueCrime: PodcastGroup {
     public var body: Body {
+        "The Apex & The Abyss"
+        
         "Crime Junkie"
             .producer("audiochuck")
             .url(authority: "crimejunkiepodcast.com")
@@ -20,6 +22,8 @@ public struct TrueCrime: PodcastGroup {
         "Dr. Death"
             .host("Laura Bell")
             .url("https://wondery.com/shows/dr-death/")
+        
+        "Lore"
         
         "Morbid"
             .subtitle("A True Crime Podcast")

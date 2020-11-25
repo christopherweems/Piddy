@@ -9,6 +9,8 @@ import PodcastGroup
 
 public struct Horror: PodcastGroup {
     public var body: Body {
+        "Dark Verse"
+        
         "Ghosts In The Burbs"
             .url(authority: "ghostsintheburbs.com")
         
@@ -36,7 +38,7 @@ public struct Horror: PodcastGroup {
             .url(authority: "unwellpodcast.com")
             .fiction()
         
-        "Wrong Station"
+        "The Wrong Station"
             .url(authority: "wrongstation.com")
         
     }

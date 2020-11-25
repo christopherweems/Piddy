@@ -15,6 +15,7 @@ public enum PiddyPodcastGroup: PodcastGroup, CaseIterable {
     case culture
     case design
     case health
+    case history
     case horror
     case music
     case philosophy
@@ -42,6 +43,9 @@ public enum PiddyPodcastGroup: PodcastGroup, CaseIterable {
             
         case .health:
             Health()
+            
+        case .history:
+            History()
             
         case .horror:
             Horror()
