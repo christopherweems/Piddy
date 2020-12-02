@@ -10,6 +10,7 @@ import PodcastGroup
 public struct Horror: PodcastGroup {
     public var body: Body {
         "Dark Verse"
+            .url(authority: "thedarkverse.sharkchild.com")
         
         "Ghosts In The Burbs"
             .url(authority: "ghostsintheburbs.com")

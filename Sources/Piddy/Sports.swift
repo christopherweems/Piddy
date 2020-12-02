@@ -9,7 +9,7 @@ import PodcastGroup
 
 public struct Sports: PodcastGroup {
     public var body: Body {
-        "Sports Uncovered"
+        "Sports Uncovered" // no specific podcast website
             .producer(.nbcSports)
         
     }

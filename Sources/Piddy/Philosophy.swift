@@ -19,6 +19,7 @@ public struct Philosophy: PodcastGroup {
             .url("https://art19.com/shows/philosophy-for-our-times")
         
         "Philosophize This!"
+            .url(authority: "philosophizethis.org")
         
     }
     

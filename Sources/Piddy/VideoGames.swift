@@ -10,6 +10,7 @@ import PodcastGroup
 public struct VideoGames: PodcastGroup {
     public var body: Body {
         "Nintendo Power Podcast"
+            .url("https://soundcloud.com/nintendopowerpodcast/")
         
         "Nintendo Voice Chat"
             .url("https://www.ign.com/watch/nintendo-voice-chat")

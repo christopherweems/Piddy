@@ -24,6 +24,7 @@ public struct TrueCrime: PodcastGroup {
             .url("https://wondery.com/shows/dr-death/")
         
         "Lore"
+            .url(authority: "lorepodcast.com")
         
         "Morbid"
             .subtitle("A True Crime Podcast")
