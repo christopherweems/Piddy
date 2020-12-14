@@ -227,7 +227,7 @@ public extension Podcast {
 public extension String {
     func url(authority: String, useHTTPS: Bool = true) -> Podcast {
         self.as(Podcast.self)
-            .url(authority: authority)
+            .url(authority: authority, useHTTPS: useHTTPS)
     }
     
     func url(_ urlString: String) -> Podcast {
