@@ -10,12 +10,12 @@ import PodcastGroup
 public struct Philosophy: PodcastGroup {
     public var body: Body {
         "Alan Watts Podcast"
-            .url(authority: "alanwattspodcast.com")
+            .url(authority: "alanwattspodcast.com", useHTTPS: false)
         
         "Into The Zone"
             .url("https://www.pushkin.fm/show/into-the-zone/")
         
-        "Philosophy for Our Times"
+        "Philosophy For Our Times"
             .url("https://art19.com/shows/philosophy-for-our-times")
         
         "Philosophize This!"
