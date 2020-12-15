@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import unstandard
 
 public enum _SequenceSubset {
     case all
@@ -15,5 +16,19 @@ public enum _SequenceSubset {
 
 public extension Sequence {
     typealias Subset = _SequenceSubset
+    
+}
+
+public extension Collection {
+    subscript(subset: Subset) -> [Element] {
+        switch subset {
+        case .all:
+            return Array(self)
+            
+        case .first:
+            return [self.first].compactMap { $0 }
+            
+        }
+    }
     
 }
