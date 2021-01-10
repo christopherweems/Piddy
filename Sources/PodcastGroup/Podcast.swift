@@ -39,8 +39,6 @@ public struct Podcast {
 }
 
 public extension Podcast.Properties {
-    private static let listFormatter = ListFormatter()
-    
     var subtitleText: String? {
         guard let subtitle = subtitle else {
             func titleContainsAll(_ elements: [String]) -> Bool {
@@ -48,7 +46,7 @@ public extension Podcast.Properties {
             }
             
             let elements = hosts.if { !titleContainsAll($0) } ?? producers.map(\.displayString)
-            return Self.listFormatter.string(from: elements).notEmpty
+	    return _ListFormatter.localizedString(byJoining: elements).notEmpty
         }
         
         switch subtitle {
@@ -59,7 +57,7 @@ public extension Podcast.Properties {
             return hosts.first
             
         case .with(.all):
-            let hostsAsList = Self.listFormatter.string(from: hosts) ?? ""
+            let hostsAsList = _ListFormatter.localizedString(byJoining: hosts)
             return "\(hostsAsList)"
         }
     }
