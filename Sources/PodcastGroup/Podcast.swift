@@ -46,7 +46,7 @@ public extension Podcast.Properties {
             }
             
             let elements = hosts.if { !titleContainsAll($0) } ?? producers.map(\.displayString)
-	    return _ListFormatter.localizedString(byJoining: elements).notEmpty
+            return _ListFormatter.localizedString(byJoining: elements).notEmpty
         }
         
         switch subtitle {
@@ -65,7 +65,7 @@ public extension Podcast.Properties {
 }
 
 
-// MARK: -
+///:
 
 extension Podcast: ExpressibleByStringLiteral {
     public init(stringLiteral value: String) {
@@ -76,7 +76,7 @@ extension Podcast: ExpressibleByStringLiteral {
 }
 
 
-// MARK: - Property Setters
+///: Property Setters
 
 public extension Podcast {
     func title(_ title: String) -> Podcast {
@@ -126,7 +126,7 @@ public extension String {
 }
 
 
-// MARK: -
+///:
 
 public extension Podcast {
     func subtitle(_ subtitle: String) -> Podcast {
@@ -170,7 +170,7 @@ public extension String {
 }
 
 
-// MARK: -
+///:
 
 public extension Podcast {
     func network(_ networks: Producer...) -> Podcast {
@@ -203,7 +203,7 @@ public extension String {
 }
 
 
-// MARK: -
+///:
 
 public extension Podcast {
     func url(authority: String, useHTTPS: Bool = true) -> Podcast {
@@ -236,7 +236,7 @@ public extension String {
 }
 
 
-// MARK: -
+///:
 
 public extension Podcast {
     func fiction(_ fiction: Bool = true) -> Podcast {

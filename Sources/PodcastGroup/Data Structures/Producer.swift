@@ -61,7 +61,7 @@ public extension Producer {
 }
 
 
-// MARK: - Helper Extensions
+///: Helper Extensions
 
 fileprivate extension String {
     func separateCamelCase() -> String {
