@@ -3,7 +3,7 @@
     "pins": [
       {
         "package": "MixedGroup",
-        "repositoryURL": "https://github.com/gitMcFly/MixedGroup",
+        "repositoryURL": "https://github.com/gitMcFly/MixedGroup.git",
         "state": {
           "branch": null,
           "revision": "3234f28234bb569effcfb665ef19e5f1d2b65dd1",
@@ -21,7 +21,7 @@
       },
       {
         "package": "swift-algorithms",
-        "repositoryURL": "https://github.com/apple/swift-algorithms",
+        "repositoryURL": "https://github.com/apple/swift-algorithms.git",
         "state": {
           "branch": null,
           "revision": "bb3bafeca0e164ece3403a9de646b7d38c07dd49",
@@ -48,11 +48,11 @@
       },
       {
         "package": "unstandard",
-        "repositoryURL": "https://github.com/christopherweems/unstandard",
+        "repositoryURL": "https://github.com/christopherweems/unstandard.git",
         "state": {
           "branch": null,
-          "revision": "a6901fb8818c7ef3ce0b53e5070ca759ad57e1b3",
-          "version": "0.0.19"
+          "revision": "7864df0d4eadc2b09b23dd09a34b90166f3c1799",
+          "version": "0.0.21"
         }
       }
     ]
